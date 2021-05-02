@@ -28,10 +28,12 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content == 'Hello there':
+    if 'HELLO THERE' in message.content.upper():
+        print('Sending message')
         await message.channel.send('General Kenobi')
         
-    elif message.content == 'What game should I play?':
+    elif 'WHAT GAME SHOULD I PLAY?' in message.content.upper():
+        print('Sending message')
         await message.channel.send(random.choice(games))
         
 
